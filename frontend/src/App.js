@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 function App() {
 useEffect(() => {
-axios.get('http://localhost:5000').then(response => {
+axios.get('http://localhost:3000').then(response => {
 console.log(response.data);
 });
 }, []);
