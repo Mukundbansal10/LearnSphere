@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import axios from 'axios';
 import Register from './Pages/Register'; 
 import { useEffect } from 'react';
-import Courses from "./Pages/Courses"
+import Course from "./Pages/Course"
 import "./index.css"
+import Login from "./Pages/Login"
 // import "./courses.css";
 
 
@@ -24,29 +24,11 @@ function App() {
 
   return (
     <>
+    <Login/>
     <Register />
-    <Courses/>
+    <Course/>
     </>
   );
 }
 
 export default App;
-=======
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React from 'react';
-import LoginPage from './pages/Login';
-import CoursePage from './pages/Course';
-
-function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<LoginPage />} />
-                <Route path="/courses" element={<CoursePage />} />
-            </Routes>
-        </Router>
-    );
-}
-
-export default App;
->>>>>>> 75856773b61f9b2999044ba62eb6698fa0ba1183
