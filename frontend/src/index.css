@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Register.css */
 
 .register-container {
@@ -9,6 +10,20 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   font-family: Arial, sans-serif;
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+>>>>>>> 75856773b61f9b2999044ba62eb6698fa0ba1183
 }
 
 .register-container h2 {
