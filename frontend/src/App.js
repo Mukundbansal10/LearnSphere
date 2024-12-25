@@ -1,15 +1,17 @@
-import axios from 'axios';
-import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import LoginPage from './pages/Login';
+import CoursePage from './pages/Course';
+
 function App() {
-useEffect(() => {
-axios.get('http://localhost:3000').then(response => {
-console.log(response.data);
-});
-}, []);
-return (
-<div>
-<h1>Welcome to E-Learning Platform</h1>
-</div>
-);
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<LoginPage />} />
+                <Route path="/courses" element={<CoursePage />} />
+            </Routes>
+        </Router>
+    );
 }
+
 export default App;
