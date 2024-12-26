@@ -1,35 +1,22 @@
-import axios from 'axios';
-import Register from './Pages/Register'; 
-import { useEffect } from 'react';
-import Course from "./Pages/Course"
-import "./index.css"
-import Login from "./Pages/Login"
-// import "./courses.css";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from "./component/Navbar"
+import Courses from './Pages/Courses';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import './App.css';
 
-
-function App() {
-  
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000');
-        console.log(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return (
-    <>
-    <Login/>
-    <Register />
-    <Course/>
-    </>
-  );
-}
-
+const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/courses" element={<Courses />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
