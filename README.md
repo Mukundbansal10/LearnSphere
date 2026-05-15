@@ -1,3 +1,3 @@
 # LearnSphere
 
-a Learning platform
+a complete Learning platform
